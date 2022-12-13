@@ -22,8 +22,11 @@ const Header = () => {
   }
 
   return (
-    <div className="container flex flex-wrap items-center justify-between mx-auto p-6 text-sm">
-      <h1 className="font-bold">Prefacely</h1>
+    <div className="flex flex-wrap items-center justify-between p-6 sm:max-w-4xl sm:text-sm lg:text-base lg:max-w-7xl mx-auto">
+      <div className="flex items-center gap-2">
+        <img src="logo.png" className="h-6" />
+        <h1 className="font-bold">Prefacely</h1>
+      </div>
       <ul className="flex gap-3">
         <li>
           <Dropdown
