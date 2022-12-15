@@ -41,7 +41,7 @@ const Header = () => {
           <Dropdown
             id={1}
             text="Solutions"
-            data={whyData}
+            data={solutionsData}
             currentId={currentId}
             dropdownClicked={dropdownClicked}
           />
@@ -50,7 +50,7 @@ const Header = () => {
           <Dropdown
             id={2}
             text="Resources"
-            data={whyData}
+            data={resourcesData}
             currentId={currentId}
             dropdownClicked={dropdownClicked}
           />

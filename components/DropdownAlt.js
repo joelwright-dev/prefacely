@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function DropdownAlt({
+export default function Dropdown({
   id,
   text,
   data,
@@ -8,6 +8,7 @@ export default function DropdownAlt({
   dropdownClicked,
 }) {
   const [isOpen, setOpen] = useState(false);
+  const [dropdownText, setDropdownText] = useState(text);
 
   const handleDropDown = () => {
     setOpen(!isOpen);
@@ -20,15 +21,20 @@ export default function DropdownAlt({
     }
   });
 
+  function handleClick(link) {
+    link.click();
+    setDropdownText(link.text);
+  }
+
   return (
-    <div className="inline-flex">
-      <div className="relative">
+    <div className="inline-flex w-full">
+      <div className="relative w-full">
         <button
           type="button"
-          className="inline-flex items-center justify-center h-full hover:text-gray-700 px-2"
+          className="flex w-full justify-between items-center h-full hover:text-gray-700"
           onClick={handleDropDown}
         >
-          {text}
+          {dropdownText}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-4 h-4 ml-2"
@@ -46,7 +52,7 @@ export default function DropdownAlt({
         </button>
 
         <div
-          className={`absolute right-0 z-10 w-56 mt-4 origin-top-right bg-white border border-gray-100 rounded-md shadow-lg ${
+          className={`absolute right-0 z-10 w-full mt-4 origin-top-right bg-white border border-gray-100 rounded-md shadow-lg ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -56,12 +62,12 @@ export default function DropdownAlt({
                 console.log(link);
               }
               return (
-                <a
-                  href={link.href}
+                <button
+                  onClick={() => handleClick(link)}
                   className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                 >
                   {link.text}
-                </a>
+                </button>
               );
             })}
           </div>

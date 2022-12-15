@@ -1,4 +1,5 @@
 import { PlayerPlay, ChevronDown, Check } from "tabler-icons-react";
+import DropdownAlt from "../components/DropdownAlt";
 
 export default function Home() {
   return (
@@ -7,171 +8,208 @@ export default function Home() {
         <h1 className="text-8xl font-bold text-center">
           A new era of
           <br />
-          <span className="text-blue-500">lead generation</span>
+          <span className="text-blue-500">cold outreach!</span>
         </h1>
         <ul className="flex gap-2 mt-8 uppercase font-bold text-sm items-center content-center justify-center">
-          <li>Extract lists of leads</li>
+          <li>Get emails opened</li>
           <li>•</li>
-          <li>Enrich data & emails</li>
+          <li>Enrich email content</li>
           <li>•</li>
-          <li>Send outreach campaigns</li>
+          <li>Connect with recipients</li>
         </ul>
-        <div className="bg-white rounded-3xl p-1 w-96 shadow flex justify-between pl-4 mt-12">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            style={{ outline: "none" }}
-          />
-          <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl right-0">
-            Start free trial
-          </button>
+        <div className="mt-12 text-center">
+          Boost open rates of your cold emails and messages through 100%
+          personalized introductory one-liners to your individual recipients.
         </div>
-        <p className="text-slate-500 mt-4 mb-8">No credit card required</p>
-        <button className="flex border-2 border-blue-500 p-2 pl-4 pr-4 rounded-3xl text-blue-500 items-center gap-1">
-          <PlayerPlay size={18} />
-          Watch video
-        </button>
         <ChevronDown size={50} className="mt-20 mb-20" />
       </div>
-      <div className="bg-white flex flex-col p-12 items-center">
-        <p className="text-blue-500 uppercase font-bold text-sm">
-          Trusted by 100,000+ businesses
-        </p>
-        <div className="flex gap-10 mt-10">
-          <img src="https://unsplash.it/g/100/50/" />
-          <img src="https://unsplash.it/g/100/50/" />
-          <img src="https://unsplash.it/g/100/50/" />
-          <img src="https://unsplash.it/g/100/50/" />
-          <img src="https://unsplash.it/g/100/50/" />
-          <img src="https://unsplash.it/g/100/50/" />
-        </div>
-      </div>
-      <div className="bg-gradient-to-b from-slate-200 to-stone-200 flex flex-col items-center content-center justify-center pt-32">
-        <h2 className="text-5xl font-bold">Why Prefacely?</h2>
+      <div className="bg-gradient-to-b from-white to-stone-200 flex flex-col items-center content-center justify-center pt-32">
         <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
-              Powerful lead gen solutions
+              The Proof
             </p>
             <h3 className="font-bold text-3xl pt-5 pb-5">
-              Generate leads from all major networks & websites
+              Our clients success with Prefacely
             </h3>
             <ul className="flex flex-col gap-1">
               <li className="flex">
-                <Check color="#32CD32" /> 100+ ready-made automations
+                Open Rate Improvement:
+                <span class="text-blue-500 pl-1 font-bold">+40%</span>
               </li>
               <li className="flex">
-                <Check color="#32CD32" /> Prebuilt workflows for all your goals
+                CTR Improvement:
+                <span class="text-blue-500 pl-1 font-bold">+30%</span>
               </li>
               <li className="flex">
-                <Check color="#32CD32" /> Import data seamlessly to any CRM
+                Direct ROI Improvement for Email:
+                <span class="text-blue-500 pl-1 font-bold">+50%</span>
+              </li>
+              <li className="flex">
+                Time Saved Per Month:
+                <span class="text-blue-500 pl-1 font-bold">+60%</span>
               </li>
             </ul>
           </div>
           <img src="https://unsplash.it/g/500/300/" />
         </div>
-        <div className="flex sm:flex-col lg:flex-row gap-10 mt-32">
-          <img
-            src="https://unsplash.it/g/500/300/"
-            className="lg:block sm:hidden"
-          />
-          <div className="flex flex-col max-w-lg">
-            <p className="text-blue-500 uppercase font-bold text-sm">
-              Powerful lead gen solutions
+        <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col">
+          <div>
+            <p className="text-2xl font-bold">
+              Improve Your Cold Communications
             </p>
-            <h3 className="font-bold text-3xl pt-5 pb-5">
-              Generate leads from all major networks & websites
-            </h3>
-            <ul className="flex flex-col gap-1">
-              <li className="flex">
-                <Check color="#32CD32" /> 100+ ready-made automations
-              </li>
-              <li className="flex">
-                <Check color="#32CD32" /> Prebuilt workflows for all your goals
-              </li>
-              <li className="flex">
-                <Check color="#32CD32" /> Import data seamlessly to any CRM
-              </li>
-            </ul>
-          </div>
-          <img
-            src="https://unsplash.it/g/500/300/"
-            className="lg:hidden sm:block"
-          />
-        </div>
-        <div className="flex sm:flex-col lg:flex-row gap-10 mt-32">
-          <div className="flex flex-col max-w-lg">
-            <p className="text-blue-500 uppercase font-bold text-sm">
-              Powerful lead gen solutions
-            </p>
-            <h3 className="font-bold text-3xl pt-5 pb-5">
-              Generate leads from all major networks & websites
-            </h3>
-            <ul className="flex flex-col gap-1">
-              <li className="flex">
-                <Check color="#32CD32" /> 100+ ready-made automations
-              </li>
-              <li className="flex">
-                <Check color="#32CD32" /> Prebuilt workflows for all your goals
-              </li>
-              <li className="flex">
-                <Check color="#32CD32" /> Import data seamlessly to any CRM
-              </li>
-            </ul>
-          </div>
-          <img src="https://unsplash.it/g/500/300/" />
-        </div>
-        <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32">
-          <div className="flex flex-col">
-            <p className="text-2xl font-bold">Ready to boost your growth?</p>
             <p className="text-slate-500">
-              14-day free trial - no credit card required
+              Find out how Prefacely can improve your cold message open rates
             </p>
-            <div className="bg-white rounded-3xl p-1 w-96 shadow flex justify-between pl-4 mt-12">
+          </div>
+          <div class="flex flex-col gap-2">
+            <div className="form-group flex">
+              <p class="flex-none">Number of cold messages sent per month:</p>
               <input
                 type="text"
-                placeholder="Enter your email"
                 style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
               />
-              <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl right-0">
-                Start free trial
-              </button>
             </div>
+            <div className="form-group flex">
+              <p class="flex-none">Your Industry:</p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+            </div>
+            <div className="form-group flex">
+              <p class="flex-none">Current (Avg) open rate:</p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+              <p class="flex-none">%</p>
+            </div>
+            <div className="form-group flex">
+              <p class="flex-none">Current (Avg) CTR:</p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+              <p class="flex-none">%</p>
+            </div>
+            <div className="form-group flex">
+              <DropdownAlt
+                text="What is your current level of personalization in your messages?"
+                data={[
+                  {
+                    text: "Little: we are not actively using full personalization in our cold messages",
+                    click: () => console.log("beans"),
+                  },
+                  {
+                    text: "Some: we try to use some personalization but this is quite limited",
+                    click: () => console.log("beans"),
+                  },
+                  {
+                    text: "A lot: we are using personalization in our messages, but not fully and completely to each prospect individually",
+                    click: () => console.log("beans"),
+                  },
+                  {
+                    text: "Total: we believe we are using complete personalization in our cold messages to each prospect individually",
+                    click: () => console.log("beans"),
+                  },
+                ]}
+                dropdownClicked={() => {}}
+                className="px-0 w-full"
+              />
+            </div>
+            <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4">
+              Go
+            </button>
           </div>
-          <img src="https://unsplash.it/g/200/100/" />
         </div>
       </div>
       <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-20">
-        <h1 className="text-5xl font-bold text-center">
-          One solution for all your goals
-        </h1>
-        <div className="flex gap-2 mt-20 uppercase font-bold text-sm items-center content-center justify-center">
-          <button className="bg-stone-200 text-stone-500 p-5 rounded-xl text-lg max-w-lg">
-            Extract lists of leads
-          </button>
-          <button className="bg-stone-200 text-stone-500 p-5 rounded-xl text-lg">
-            Enrich data & emails
-          </button>
-          <button className="bg-stone-200 text-stone-500 p-5 rounded-xl text-lg">
-            Send outreach campaigns
-          </button>
+        <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
+          <div className="flex flex-col max-w-lg">
+            <p className="text-blue-500 uppercase font-bold text-sm">
+              The results
+            </p>
+            <h3 className="font-bold text-3xl pt-5 pb-5">
+              Cold emails and messages with a seriously impressive open rate
+            </h3>
+            <p>
+              Did you know that one of the best ways to improve the open rate of
+              your cold messages is the immediate relevance of your cold
+              messages is the immediate relevance of the first line?
+              <br />
+              <br />
+              Forget "Hope you are well?", "Can we discuss...", "Have you
+              seen...", and other generalised, weak, and irrelevant opening
+              approaches which land you in the trash folder automatically.
+              <br />
+              <br />
+              The problem?
+              <br />
+              <br />
+              Finding personalized insights and converting them into catchy and
+              relevant one liners for every prospect is tricky and time
+              consuming.
+              <br />
+              <br />
+              Introducing: Prefacely
+              <br />
+              <br />
+              With Prefacely, we review your prospects and provide short,
+              specific, and relevant insights for you to use for all your
+              prospects when reaching out to them cold.
+              <br />
+              <br />
+              That means your message becomes super relevant, immediately.
+              <br />
+              <br />
+              Prefacely drives a much higher open rate which gives your
+              communication a better chance of driving the next stage in the
+              conversation.
+              <br />
+              <br />
+              <span className="text-blue-500 underline">Try us today</span>,
+              with a no risk guarantee.
+            </p>
+          </div>
+          <img src="https://unsplash.it/g/500/300/" />
         </div>
-        <div className="bg-white rounded-3xl p-1 w-96 shadow flex justify-between pl-4 mt-12">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            style={{ outline: "none" }}
+        <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
+          <img
+            src="https://unsplash.it/g/500/300/"
+            class="md:hidden lg:block"
           />
-          <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl right-0">
-            Start free trial
-          </button>
+          <div className="flex flex-col max-w-lg">
+            <p className="text-blue-500 uppercase font-bold text-sm">
+              Prefacely is simple
+            </p>
+            <h3 className="font-bold text-3xl pt-5 pb-5">The process</h3>
+            <p>
+              <span class="text-blue-500 font-bold">Step 1:</span> You supply us
+              with your list of individual prospects, then sit back and let us
+              work our magic.
+              <br />
+              <br />
+              <span class="text-blue-500 font-bold">Step 2:</span> Prefacely
+              uses its own technology, systems, and dedicated team to retrieve
+              all the personalized insights for each prospect, converting them
+              to introductory one liners.
+              <br />
+              <br />
+              <span class="text-blue-500 font-bold">Step 3:</span> You add the
+              best one liner to your message, and witness the true potential of
+              cold marketing through messaging.
+            </p>
+          </div>
+          <img
+            src="https://unsplash.it/g/500/300/"
+            class="md:block lg:hidden"
+          />
         </div>
-        <p className="text-slate-500 mt-4 mb-8">No credit card required</p>
-        <button className="flex border-2 border-blue-500 p-2 pl-4 pr-4 rounded-3xl text-blue-500 items-center gap-1">
-          <PlayerPlay size={18} />
-          Watch video
-        </button>
-        <ChevronDown size={50} className="mt-20 mb-20" />
       </div>
     </>
   );
