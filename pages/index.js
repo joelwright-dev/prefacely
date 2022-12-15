@@ -203,6 +203,11 @@ export default function Home() {
               <span class="text-blue-500 font-bold">Step 3:</span> You add the
               best one liner to your message, and witness the true potential of
               cold marketing through messaging.
+              <br />
+              <br />
+              You'll <span class="text-blue-500 font-bold">smash</span> through
+              your existing open rates and drive a higher CTR from your cold
+              emails and messages.
             </p>
           </div>
           <img
@@ -210,6 +215,96 @@ export default function Home() {
             class="md:block lg:hidden"
           />
         </div>
+        <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col">
+          <div>
+            <p className="text-2xl font-bold">Pricing</p>
+            <p className="text-slate-500">
+              Prefacely provides a prospect-per-month pricing rate,{" "}
+              <span class="text-blue-500 font-bold">
+                starting from just 0.99 per prospect per month.
+              </span>
+              <br />
+              <br />
+              All our new clients receive a no risk guarantee for the first
+              month. You have nothing to lose (and a lot to win).
+              <br />
+              <br />
+              Complete the request below to receive pricing information:
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div className="form-group flex">
+              <p class="flex-none">Name:</p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+            </div>
+            <div className="form-group flex">
+              <p class="flex-none">Email Address:</p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+            </div>
+            <div className="form-group flex">
+              <p class="flex-none">Company Name:</p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+            </div>
+            <div className="form-group flex">
+              <p class="flex-none">
+                Guesstimate, how many prospects per month do you need prefacely
+                for?
+              </p>
+              <input
+                type="text"
+                style={{ outline: "none" }}
+                class="border-b-2 border-blue-500 ml-2 flex-1"
+              />
+            </div>
+            <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white flex flex-col p-12 items-center">
+        <p className="text-blue-500 uppercase font-bold text-sm">Testimonial</p>
+        <div className="flex gap-10 mt-10">
+          <p>
+            "Before, our cold messages were bland and our open rate was less
+            than 20%. With prefacely, we now average an open rate of 55%, which
+            has had a direct impact on the ROI of our cold email approach."
+            <br />
+            <br />- Tony P, Marketing Manager of Bluehawk Design
+          </p>
+        </div>
+      </div>
+      <div className="bg-gradient-to-b to-white from-slate-200 flex flex-col items-center content-center justify-center p-20">
+        <p>
+          Prefacely provides short, specific, and 100% personalized insights for
+          cold messages sent to prospects which drives higher open and
+          click-through rates.
+          <br />
+          <br />
+          Email us:{" "}
+          <a href="mailto:info@prefacely.com" class="text-blue-500">
+            info@prefacely.com
+          </a>
+          <br />
+          <br />
+          Prefacely Limited, registered in England and Wales with company number
+          XXX, whose registered office is at XXXX.
+          <br />
+          <br />
+          Copyright &copy;2023
+        </p>
       </div>
     </>
   );
