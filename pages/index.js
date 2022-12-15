@@ -1,5 +1,8 @@
 import { PlayerPlay, ChevronDown, Check } from "tabler-icons-react";
 import DropdownAlt from "../components/DropdownAlt";
+import Chart from "../public/chart.svg";
+import Email from "../public/email.svg";
+import Rocket from "../public/rocket.svg";
 
 export default function Home() {
   return (
@@ -51,7 +54,7 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <img src="https://unsplash.it/g/500/300/" />
+          <Chart />
         </div>
         <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col">
           <div>
@@ -176,13 +179,10 @@ export default function Home() {
               with a no risk guarantee.
             </p>
           </div>
-          <img src="https://unsplash.it/g/500/300/" />
+          <Email />
         </div>
         <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
-          <img
-            src="https://unsplash.it/g/500/300/"
-            class="md:hidden lg:block"
-          />
+          <Rocket class="md:hidden lg:block" />
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
               Prefacely is simple
@@ -210,10 +210,7 @@ export default function Home() {
               emails and messages.
             </p>
           </div>
-          <img
-            src="https://unsplash.it/g/500/300/"
-            class="md:block lg:hidden"
-          />
+          <Rocket class="md:block lg:hidden" />
         </div>
         <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col">
           <div>
