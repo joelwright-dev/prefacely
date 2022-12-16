@@ -58,11 +58,9 @@ export default function Dropdown({
         >
           <div className="p-2">
             {data.map((link) => {
-              {
-                console.log(link);
-              }
               return (
                 <button
+                  key={link.text}
                   onClick={() => handleClick(link)}
                   className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                 >

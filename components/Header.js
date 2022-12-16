@@ -32,14 +32,14 @@ const Header = () => {
           <img src="logo.png" className="h-6" />
           <h1 className="font-bold">PrefaceLy</h1>
         </div>
-        <div class="block sm:hidden">
+        <div className="block sm:hidden">
           <button
             id="nav-toggle"
-            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-blue-500 hover:border-blue-500"
+            className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-blue-500 hover:border-blue-500"
             onClick={handleHeader}
           >
             <svg
-              class="fill-current h-3 w-3"
+              className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -71,7 +71,7 @@ const Header = () => {
             <a href="#pricing">Pricing</a>
           </li>
         </ul>
-        <div class="gap-2 hidden sm:flex">
+        <div className="gap-2 hidden sm:flex">
           <a
             href="#pricing"
             className="bg-blue-500 text-white p-2 pl-4 pr-4 rounded-3xl"

@@ -41,19 +41,19 @@ export default function Home() {
             <ul className="flex flex-col gap-1">
               <li className="flex">
                 Open Rate Improvement:
-                <span class="text-blue-500 pl-1 font-bold">+40%</span>
+                <span className="text-blue-500 pl-1 font-bold">+40%</span>
               </li>
               <li className="flex">
                 CTR Improvement:
-                <span class="text-blue-500 pl-1 font-bold">+30%</span>
+                <span className="text-blue-500 pl-1 font-bold">+30%</span>
               </li>
               <li className="flex">
                 Direct ROI Improvement for Email:
-                <span class="text-blue-500 pl-1 font-bold">+50%</span>
+                <span className="text-blue-500 pl-1 font-bold">+50%</span>
               </li>
               <li className="flex">
                 Time Saved Per Month:
-                <span class="text-blue-500 pl-1 font-bold">+60%</span>
+                <span className="text-blue-500 pl-1 font-bold">+60%</span>
               </li>
             </ul>
           </div>
@@ -71,43 +71,45 @@ export default function Home() {
               Find out how Prefacely can improve your cold message open rates
             </p>
           </div>
-          <div class="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Number of cold messages sent per month:</p>
+              <p className="flex-none">
+                Number of cold messages sent per month:
+              </p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Your Industry:</p>
+              <p className="flex-none">Your Industry:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Current (Avg) open rate:</p>
-              <div class="flex w-full">
+              <p className="flex-none">Current (Avg) open rate:</p>
+              <div className="flex w-full">
                 <input
                   type="text"
                   style={{ outline: "none" }}
-                  class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                  className="border-b-2 border-blue-500 sm:ml-2 flex-1"
                 />
-                <p class="flex-none">%</p>
+                <p className="flex-none">%</p>
               </div>
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Current (Avg) CTR:</p>
-              <div class="flex w-full">
+              <p className="flex-none">Current (Avg) CTR:</p>
+              <div className="flex w-full">
                 <input
                   type="text"
                   style={{ outline: "none" }}
-                  class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                  className="border-b-2 border-blue-500 sm:ml-2 flex-1"
                 />
-                <p class="flex-none">%</p>
+                <p className="flex-none">%</p>
               </div>
             </div>
             <div className="form-group flex">
@@ -198,35 +200,35 @@ export default function Home() {
           id="the-process"
           className="flex flex-col sm:flex-row w-full px-10 gap-10 mt-20"
         >
-          <Rocket class="hidden sm:block max-w-xs sm:max-w-sm" />
+          <Rocket className="hidden sm:block max-w-xs sm:max-w-sm" />
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
               Prefacely is simple
             </p>
             <h3 className="font-bold text-3xl pt-5 pb-5">The process</h3>
             <p>
-              <span class="text-blue-500 font-bold">Step 1:</span> You supply us
-              with your list of individual prospects, then sit back and let us
-              work our magic.
+              <span className="text-blue-500 font-bold">Step 1:</span> You
+              supply us with your list of individual prospects, then sit back
+              and let us work our magic.
               <br />
               <br />
-              <span class="text-blue-500 font-bold">Step 2:</span> Prefacely
+              <span className="text-blue-500 font-bold">Step 2:</span> Prefacely
               uses its own technology, systems, and dedicated team to retrieve
               all the personalized insights for each prospect, converting them
               to introductory one liners.
               <br />
               <br />
-              <span class="text-blue-500 font-bold">Step 3:</span> You add the
-              best one liner to your message, and witness the true potential of
-              cold marketing through messaging.
+              <span className="text-blue-500 font-bold">Step 3:</span> You add
+              the best one liner to your message, and witness the true potential
+              of cold marketing through messaging.
               <br />
               <br />
-              You'll <span class="text-blue-500 font-bold">smash</span> through
-              your existing open rates and drive a higher CTR from your cold
-              emails and messages.
+              You'll <span className="text-blue-500 font-bold">smash</span>{" "}
+              through your existing open rates and drive a higher CTR from your
+              cold emails and messages.
             </p>
           </div>
-          <Rocket class="visible sm:hidden max-w-xs sm:max-w-sm" />
+          <Rocket className="visible sm:hidden max-w-xs sm:max-w-sm" />
         </div>
         <div
           id="pricing"
@@ -236,7 +238,7 @@ export default function Home() {
             <p className="text-2xl font-bold">Pricing</p>
             <p className="text-slate-500">
               Prefacely provides a prospect-per-month pricing rate,{" "}
-              <span class="text-blue-500 font-bold">
+              <span className="text-blue-500 font-bold">
                 starting from just 0.99 per prospect per month.
               </span>
               <br />
@@ -248,40 +250,40 @@ export default function Home() {
               Complete the request below to receive pricing information:
             </p>
           </div>
-          <div class="flex gap-2 flex-col">
+          <div className="flex gap-2 flex-col">
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Name:</p>
+              <p className="flex-none">Name:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Email Address:</p>
+              <p className="flex-none">Email Address:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="flex-none">Company Name:</p>
+              <p className="flex-none">Company Name:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p class="sm:flex-none">
+              <p className="sm:flex-none">
                 Guesstimate, how many prospects per month do you need prefacely
                 for?
               </p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4">
@@ -310,7 +312,7 @@ export default function Home() {
           <br />
           <br />
           Email us:{" "}
-          <a href="mailto:info@prefacely.com" class="text-blue-500">
+          <a href="mailto:info@prefacely.com" className="text-blue-500">
             info@prefacely.com
           </a>
           <br />
