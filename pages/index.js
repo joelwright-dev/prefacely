@@ -118,19 +118,19 @@ export default function Home() {
                 data={[
                   {
                     text: "Little: we are not actively using full personalization in our cold messages",
-                    click: () => console.log("beans"),
+                    click: () => console.log("test"),
                   },
                   {
                     text: "Some: we try to use some personalization but this is quite limited",
-                    click: () => console.log("beans"),
+                    click: () => console.log("test"),
                   },
                   {
                     text: "A lot: we are using personalization in our messages, but not fully and completely to each prospect individually",
-                    click: () => console.log("beans"),
+                    click: () => console.log("test"),
                   },
                   {
                     text: "Total: we believe we are using complete personalization in our cold messages to each prospect individually",
-                    click: () => console.log("beans"),
+                    click: () => console.log("test"),
                   },
                 ]}
                 dropdownClicked={() => {}}
@@ -161,9 +161,10 @@ export default function Home() {
               messages is the immediate relevance of the first line?
               <br />
               <br />
-              Forget "Hope you are well?", "Can we discuss...", "Have you
-              seen...", and other generalised, weak, and irrelevant opening
-              approaches which land you in the trash folder automatically.
+              Forget &quot;Hope you are well?&quot;, &quot;Can we
+              discuss...&quot;, &quot;Have you seen...&quot;, and other
+              generalised, weak, and irrelevant opening approaches which land
+              you in the trash folder automatically.
               <br />
               <br />
               The problem?
@@ -223,7 +224,9 @@ export default function Home() {
               of cold marketing through messaging.
               <br />
               <br />
-              You'll <span className="text-blue-500 font-bold">smash</span>{" "}
+              You&apos;ll <span className="text-blue-500 font-bold">
+                smash
+              </span>{" "}
               through your existing open rates and drive a higher CTR from your
               cold emails and messages.
             </p>
@@ -296,9 +299,10 @@ export default function Home() {
         <p className="text-blue-500 uppercase font-bold text-sm">Testimonial</p>
         <div className="flex gap-10 mt-10 max-w-3xl">
           <p>
-            "Before, our cold messages were bland and our open rate was less
-            than 20%. With prefacely, we now average an open rate of 55%, which
-            has had a direct impact on the ROI of our cold email approach."
+            &quot;Before, our cold messages were bland and our open rate was
+            less than 20%. With prefacely, we now average an open rate of 55%,
+            which has had a direct impact on the ROI of our cold email
+            approach.&quot;
             <br />
             <br />- Tony P, Marketing Manager of Bluehawk Design
           </p>
