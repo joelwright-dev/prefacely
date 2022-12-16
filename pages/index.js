@@ -199,7 +199,7 @@ export default function Home() {
         </div>
         <div
           id="the-process"
-          className="flex flex-col sm:flex-row w-full px-10 gap-10 mt-20"
+          className="flex flex-col sm:flex-row w-full px-10 gap-10 mt-20 sm:w-auto"
         >
           <Rocket className="hidden sm:block max-w-xs sm:max-w-sm" />
           <div className="flex flex-col max-w-lg">
@@ -279,7 +279,7 @@ export default function Home() {
               />
             </div>
             <div className="form-group flex flex-col sm:flex-row">
-              <p className="sm:flex-none">
+              <p className="flex">
                 Guesstimate, how many prospects per month do you need prefacely
                 for?
               </p>
