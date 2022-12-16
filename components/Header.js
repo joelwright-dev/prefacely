@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const Header = () => {
   const [currentId, setCurrentId] = useState();
+  const [headerOpen, setHeaderOpen] = useState(false);
 
   const whyData = [
     { text: "Incredible results", href: "#the-proof" },
@@ -20,6 +21,10 @@ const Header = () => {
     setCurrentId(id);
   }
 
+  function handleHeader() {
+    setHeaderOpen(!headerOpen);
+  }
+
   return (
     <>
       <div className="flex flex-wrap lg:flex-row xs:flex-col items-center justify-between p-6 sm:max-w-4xl sm:text-sm lg:text-base lg:max-w-7xl mx-auto">
@@ -31,6 +36,7 @@ const Header = () => {
           <button
             id="nav-toggle"
             class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-blue-500 hover:border-blue-500"
+            onClick={handleHeader}
           >
             <svg
               class="fill-current h-3 w-3"
@@ -74,7 +80,11 @@ const Header = () => {
           </a>
         </div>
       </div>
-      <ul className="gap-3 sm:hidden flex-col flex px-5 pb-5 border-b-2 border-black">
+      <ul
+        className={`gap-3 ${
+          headerOpen ? "" : "hidden"
+        } flex-col flex px-5 pb-5 border-b-2 border-black sm:hidden`}
+      >
         <li>
           <Dropdown
             id={0}

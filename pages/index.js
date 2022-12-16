@@ -7,20 +7,20 @@ import Rocket from "../public/rocket.svg";
 export default function Home() {
   return (
     <>
-      <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-40 h-screen -mt-20">
-        <h1 className="text-8xl font-bold text-center">
+      <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-40 h-screen lg:-mt-20">
+        <h1 className="lg:text-8xl text-4xl sm:text-6xl font-bold text-center">
           A new era of
           <br />
           <span className="text-blue-500">cold outreach!</span>
         </h1>
-        <ul className="flex gap-2 mt-8 uppercase font-bold text-sm items-center content-center justify-center">
+        <ul className="flex-col sm:flex-row flex gap-2 mt-8 uppercase font-bold text-sm items-center content-center justify-center">
           <li>Get emails opened</li>
-          <li>•</li>
+          <li className="hidden sm:flex">•</li>
           <li>Enrich email content</li>
-          <li>•</li>
+          <li className="hidden sm:flex">•</li>
           <li>Connect with recipients</li>
         </ul>
-        <div className="mt-12 text-center max-w-3xl">
+        <div className="mt-12 text-center max-w-sm px-5 sm:max-w-2xl">
           Boost open rates of your cold emails and messages through 100%
           personalized introductory one-liners to your individual recipients.
         </div>
@@ -29,9 +29,9 @@ export default function Home() {
       <div className="bg-gradient-to-b from-white to-stone-200 flex flex-col items-center content-center justify-center pt-32">
         <div
           id="the-proof"
-          className="flex sm:flex-col lg:flex-row gap-10 mt-20"
+          className="flex flex-col sm:flex-row gap-10 mt-20 w-full px-10 sm:w-auto"
         >
-          <div className="flex flex-col max-w-lg">
+          <div className="flex flex-col">
             <p className="text-blue-500 uppercase font-bold text-sm">
               The Proof
             </p>
@@ -57,11 +57,11 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <Chart />
+          <Chart className="max-w-xs sm:max-w-sm" />
         </div>
         <div
           id="improve-your-cold-communications"
-          className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col"
+          className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col mx-5"
         >
           <div>
             <p className="text-2xl font-bold">
@@ -72,39 +72,43 @@ export default function Home() {
             </p>
           </div>
           <div class="flex flex-col gap-2">
-            <div className="form-group flex">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Number of cold messages sent per month:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
+                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
-            <div className="form-group flex">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Your Industry:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
+                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
-            <div className="form-group flex">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Current (Avg) open rate:</p>
-              <input
-                type="text"
-                style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
-              />
-              <p class="flex-none">%</p>
+              <div class="flex w-full">
+                <input
+                  type="text"
+                  style={{ outline: "none" }}
+                  class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                />
+                <p class="flex-none">%</p>
+              </div>
             </div>
-            <div className="form-group flex">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Current (Avg) CTR:</p>
-              <input
-                type="text"
-                style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
-              />
-              <p class="flex-none">%</p>
+              <div class="flex w-full">
+                <input
+                  type="text"
+                  style={{ outline: "none" }}
+                  class="border-b-2 border-blue-500 sm:ml-2 flex-1"
+                />
+                <p class="flex-none">%</p>
+              </div>
             </div>
             <div className="form-group flex">
               <DropdownAlt
@@ -140,7 +144,7 @@ export default function Home() {
       <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-20">
         <div
           id="the-results"
-          className="flex sm:flex-col lg:flex-row gap-10 mt-20"
+          className="flex flex-col sm:flex-row gap-10 mt-20 w-full sm:w-auto px-10"
         >
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
@@ -188,13 +192,13 @@ export default function Home() {
               with a no risk guarantee.
             </p>
           </div>
-          <Email />
+          <Email className="max-w-xs sm:max-w-sm" />
         </div>
         <div
           id="the-process"
-          className="flex sm:flex-col lg:flex-row gap-10 mt-20"
+          className="flex flex-col sm:flex-row w-full px-10 gap-10 mt-20"
         >
-          <Rocket class="md:hidden lg:block" />
+          <Rocket class="hidden sm:block max-w-xs sm:max-w-sm" />
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
               Prefacely is simple
@@ -222,11 +226,11 @@ export default function Home() {
               emails and messages.
             </p>
           </div>
-          <Rocket class="md:block lg:hidden" />
+          <Rocket class="visible sm:hidden max-w-xs sm:max-w-sm" />
         </div>
         <div
           id="pricing"
-          className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col"
+          className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col mx-5"
         >
           <div>
             <p className="text-2xl font-bold">Pricing</p>
@@ -244,40 +248,40 @@ export default function Home() {
               Complete the request below to receive pricing information:
             </p>
           </div>
-          <div class="flex flex-col gap-2">
-            <div className="form-group flex">
+          <div class="flex gap-2 flex-col">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Name:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
+                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
-            <div className="form-group flex">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Email Address:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
+                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
-            <div className="form-group flex">
+            <div className="form-group flex flex-col sm:flex-row">
               <p class="flex-none">Company Name:</p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
+                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
-            <div className="form-group flex">
-              <p class="flex-none">
+            <div className="form-group flex flex-col sm:flex-row">
+              <p class="sm:flex-none">
                 Guesstimate, how many prospects per month do you need prefacely
                 for?
               </p>
               <input
                 type="text"
                 style={{ outline: "none" }}
-                class="border-b-2 border-blue-500 ml-2 flex-1"
+                class="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
             <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4">
@@ -298,7 +302,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="bg-gradient-to-b to-white from-slate-200 flex flex-col items-center content-center justify-center p-20">
+      <div className="bg-gradient-to-b to-white from-slate-200 flex flex-col items-center content-center justify-center p-10 sm:p-20">
         <p className="max-w-3xl">
           Prefacely provides short, specific, and 100% personalized insights for
           cold messages sent to prospects which drives higher open and

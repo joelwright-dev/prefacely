@@ -31,7 +31,7 @@ export default function Dropdown({
       <div className="relative w-full">
         <button
           type="button"
-          className="flex w-full justify-between items-center h-full hover:text-gray-700"
+          className="flex w-full justify-between items-center h-full hover:text-gray-700 text-left"
           onClick={handleDropDown}
         >
           {dropdownText}
