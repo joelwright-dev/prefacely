@@ -7,7 +7,7 @@ import Rocket from "../public/rocket.svg";
 export default function Home() {
   return (
     <>
-      <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-40">
+      <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-40 h-screen -mt-20">
         <h1 className="text-8xl font-bold text-center">
           A new era of
           <br />
@@ -20,14 +20,17 @@ export default function Home() {
           <li>•</li>
           <li>Connect with recipients</li>
         </ul>
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center max-w-3xl">
           Boost open rates of your cold emails and messages through 100%
           personalized introductory one-liners to your individual recipients.
         </div>
         <ChevronDown size={50} className="mt-20 mb-20" />
       </div>
       <div className="bg-gradient-to-b from-white to-stone-200 flex flex-col items-center content-center justify-center pt-32">
-        <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
+        <div
+          id="the-proof"
+          className="flex sm:flex-col lg:flex-row gap-10 mt-20"
+        >
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
               The Proof
@@ -56,7 +59,10 @@ export default function Home() {
           </div>
           <Chart />
         </div>
-        <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col">
+        <div
+          id="improve-your-cold-communications"
+          className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col"
+        >
           <div>
             <p className="text-2xl font-bold">
               Improve Your Cold Communications
@@ -132,7 +138,10 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-20">
-        <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
+        <div
+          id="the-results"
+          className="flex sm:flex-col lg:flex-row gap-10 mt-20"
+        >
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
               The results
@@ -181,7 +190,10 @@ export default function Home() {
           </div>
           <Email />
         </div>
-        <div className="flex sm:flex-col lg:flex-row gap-10 mt-20">
+        <div
+          id="the-process"
+          className="flex sm:flex-col lg:flex-row gap-10 mt-20"
+        >
           <Rocket class="md:hidden lg:block" />
           <div className="flex flex-col max-w-lg">
             <p className="text-blue-500 uppercase font-bold text-sm">
@@ -212,7 +224,10 @@ export default function Home() {
           </div>
           <Rocket class="md:block lg:hidden" />
         </div>
-        <div className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col">
+        <div
+          id="pricing"
+          className="bg-white rounded-xl flex p-7 gap-7 mt-32 mb-32 flex-col"
+        >
           <div>
             <p className="text-2xl font-bold">Pricing</p>
             <p className="text-slate-500">
@@ -273,7 +288,7 @@ export default function Home() {
       </div>
       <div className="bg-white flex flex-col p-12 items-center">
         <p className="text-blue-500 uppercase font-bold text-sm">Testimonial</p>
-        <div className="flex gap-10 mt-10">
+        <div className="flex gap-10 mt-10 max-w-3xl">
           <p>
             "Before, our cold messages were bland and our open rate was less
             than 20%. With prefacely, we now average an open rate of 55%, which
@@ -284,7 +299,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-gradient-to-b to-white from-slate-200 flex flex-col items-center content-center justify-center p-20">
-        <p>
+        <p className="max-w-3xl">
           Prefacely provides short, specific, and 100% personalized insights for
           cold messages sent to prospects which drives higher open and
           click-through rates.

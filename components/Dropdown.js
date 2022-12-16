@@ -6,6 +6,7 @@ export default function DropdownAlt({
   data,
   currentId,
   dropdownClicked,
+  mobile,
 }) {
   const [isOpen, setOpen] = useState(false);
 
@@ -21,11 +22,13 @@ export default function DropdownAlt({
   });
 
   return (
-    <div className="inline-flex">
-      <div className="relative">
+    <div className="inline-flex w-full">
+      <div className="relative w-full">
         <button
           type="button"
-          className="inline-flex items-center justify-center h-full hover:text-gray-700 px-2"
+          className={`inline-flex w-full items-center justify-center h-full hover:text-gray-700 px-2 ${
+            mobile ? "justify-between" : ""
+          }`}
           onClick={handleDropDown}
         >
           {text}
