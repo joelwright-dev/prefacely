@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-export default function Dropdown({
-  id,
-  text,
-  data,
-  currentId,
-  dropdownClicked,
-}) {
+export default function Dropdown({ id, text, data, currentId }) {
   const [isOpen, setOpen] = useState(false);
   const [dropdownText, setDropdownText] = useState(text);
 
   const handleDropDown = () => {
     setOpen(!isOpen);
-    dropdownClicked(id);
   };
 
   useEffect(() => {
@@ -61,6 +54,7 @@ export default function Dropdown({
               return (
                 <button
                   key={link.text}
+                  type="button"
                   onClick={() => handleClick(link)}
                   className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                 >

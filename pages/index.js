@@ -3,8 +3,34 @@ import DropdownAlt from "../components/DropdownAlt";
 import Chart from "../public/chart.svg";
 import Email from "../public/email.svg";
 import Rocket from "../public/rocket.svg";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Modal from "../components/Modal";
 
 export default function Home() {
+  const [modal, setModal] = useState(false);
+  const [coldMessages, setColdMessages] = useState(0);
+  const [industry, setIndustry] = useState("");
+  const [openRate, setOpenRate] = useState(0);
+  const [CTR, setCTR] = useState(0);
+  const [personalization, setPersonalization] = useState("");
+  const [calculateData, setCalculateData] = useState({});
+
+  const submitCalculator = async (event) => {
+    event.preventDefault();
+    setModal(true);
+
+    setCalculateData({
+      coldMessages: event.target.coldmessages.value,
+      industry: event.target.industry.value,
+      openRate: event.target.openrate.value,
+      CTR: event.target.ctr.value,
+      personalization: personalization,
+    });
+
+    console.log(calculateData);
+  };
+
   return (
     <>
       <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-40 h-screen lg:-mt-20">
@@ -71,13 +97,14 @@ export default function Home() {
               Find out how Prefacely can improve your cold message open rates
             </p>
           </div>
-          <div className="flex flex-col gap-2">
+          <form className="flex flex-col gap-2" onSubmit={submitCalculator}>
             <div className="form-group flex flex-col sm:flex-row">
               <p className="flex-none">
                 Number of cold messages sent per month:
               </p>
               <input
                 type="text"
+                name="coldmessages"
                 style={{ outline: "none" }}
                 className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
@@ -86,6 +113,7 @@ export default function Home() {
               <p className="flex-none">Your Industry:</p>
               <input
                 type="text"
+                name="industry"
                 style={{ outline: "none" }}
                 className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
@@ -95,6 +123,7 @@ export default function Home() {
               <div className="flex w-full">
                 <input
                   type="text"
+                  name="openrate"
                   style={{ outline: "none" }}
                   className="border-b-2 border-blue-500 sm:ml-2 flex-1"
                 />
@@ -106,6 +135,7 @@ export default function Home() {
               <div className="flex w-full">
                 <input
                   type="text"
+                  name="ctr"
                   style={{ outline: "none" }}
                   className="border-b-2 border-blue-500 sm:ml-2 flex-1"
                 />
@@ -118,29 +148,43 @@ export default function Home() {
                 data={[
                   {
                     text: "Little: we are not actively using full personalization in our cold messages",
-                    click: () => console.log("test"),
+                    click: () =>
+                      setPersonalization(
+                        "Little: we are not actively using full personalization in our cold messages"
+                      ),
                   },
                   {
                     text: "Some: we try to use some personalization but this is quite limited",
-                    click: () => console.log("test"),
+                    click: () =>
+                      setPersonalization(
+                        "Some: we try to use some personalization but this is quite limited"
+                      ),
                   },
                   {
                     text: "A lot: we are using personalization in our messages, but not fully and completely to each prospect individually",
-                    click: () => console.log("test"),
+                    click: () =>
+                      setPersonalization(
+                        "A lot: we are using personalization in our messages, but not fully and completely to each prospect individually"
+                      ),
                   },
                   {
                     text: "Total: we believe we are using complete personalization in our cold messages to each prospect individually",
-                    click: () => console.log("test"),
+                    click: () =>
+                      setPersonalization(
+                        "Total: we believe we are using complete personalization in our cold messages to each prospect individually"
+                      ),
                   },
                 ]}
-                dropdownClicked={() => {}}
                 className="px-0 w-full"
               />
             </div>
-            <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4">
+            <button
+              className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4"
+              type="submit"
+            >
               Go
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <div className="bg-gradient-to-b from-white to-slate-200 flex flex-col items-center content-center justify-center pt-20">
@@ -296,7 +340,9 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-white flex flex-col p-12 items-center">
-        <p className="text-blue-500 uppercase font-bold text-sm">Testimonial</p>
+        <p className="text-blue-500 uppercase font-bold text-sm">
+          Clients Love Prefacely
+        </p>
         <div className="flex gap-10 mt-10 max-w-3xl">
           <p>
             &quot;Before, our cold messages were bland and our open rate was
@@ -328,6 +374,19 @@ export default function Home() {
           Copyright &copy;2023
         </p>
       </div>
+
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+        {modal && (
+          <Modal
+            closeModal={() => setModal(false)}
+            title="Calculating..."
+            body="Prefacely will now find out how we can improve your cold message open rates"
+            button="Calculate"
+            email={true}
+            formdata={calculateData}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }
