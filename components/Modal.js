@@ -2,6 +2,8 @@ import { ArrowNarrowRight, X, PlugX } from "tabler-icons-react";
 import Backdrop from "./Backdrop";
 import { motion } from "framer-motion";
 import { AlertTriangle } from "tabler-icons-react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const dropIn = {
   hidden: {
@@ -25,7 +27,30 @@ const dropIn = {
 };
 
 const Modal = ({ closeModal, title, body, button, email, formdata }) => {
-  console.log(formdata);
+  const [emailAddress, setEmailAddress] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    formdata.email = emailAddress;
+    emailjs
+      .send(
+        "service_4ws5mht",
+        "template_t0lg20y",
+        formdata,
+        "dFICM-93zaiNVoeX8"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED!", err);
+        }
+      );
+    closeModal();
+  };
+
+  console.log(emailAddress);
 
   return (
     <Backdrop onClick={closeModal}>
@@ -56,6 +81,8 @@ const Modal = ({ closeModal, title, body, button, email, formdata }) => {
                   <input
                     type="text"
                     name="ctr"
+                    value={emailAddress}
+                    onChange={(event) => setEmailAddress(event.target.value)}
                     style={{ outline: "none" }}
                     className="border-b-2 border-blue-500 sm:ml-2 flex-1"
                   />
@@ -68,7 +95,7 @@ const Modal = ({ closeModal, title, body, button, email, formdata }) => {
               className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => closeModal()}
+              onClick={sendEmail}
             >
               {button}
             </motion.button>

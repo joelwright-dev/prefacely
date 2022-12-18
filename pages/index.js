@@ -9,10 +9,6 @@ import Modal from "../components/Modal";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
-  const [coldMessages, setColdMessages] = useState(0);
-  const [industry, setIndustry] = useState("");
-  const [openRate, setOpenRate] = useState(0);
-  const [CTR, setCTR] = useState(0);
   const [personalization, setPersonalization] = useState("");
   const [calculateData, setCalculateData] = useState({});
 
@@ -24,7 +20,7 @@ export default function Home() {
       coldMessages: event.target.coldmessages.value,
       industry: event.target.industry.value,
       openRate: event.target.openrate.value,
-      CTR: event.target.ctr.value,
+      ctr: event.target.ctr.value,
       personalization: personalization,
     });
 
