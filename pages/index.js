@@ -6,16 +6,16 @@ import Rocket from "../public/rocket.svg";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Modal from "../components/Modal";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
   const [personalization, setPersonalization] = useState("");
   const [calculateData, setCalculateData] = useState({});
 
-  const submitCalculator = async (event) => {
+  const submitCalculator = (event) => {
     event.preventDefault();
     setModal(true);
-
     setCalculateData({
       coldMessages: event.target.coldmessages.value,
       industry: event.target.industry.value,
@@ -23,8 +23,31 @@ export default function Home() {
       ctr: event.target.ctr.value,
       personalization: personalization,
     });
+  };
 
-    console.log(calculateData);
+  const submitPricing = (event) => {
+    event.preventDefault();
+    const formdata = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      company: event.target.company.value,
+      prospects: event.target.prospects.value,
+    };
+    emailjs
+      .send(
+        "service_4ws5mht",
+        "template_znhfkmm",
+        formdata,
+        "dFICM-93zaiNVoeX8"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED!", err);
+        }
+      );
   };
 
   return (
@@ -293,11 +316,12 @@ export default function Home() {
               Complete the request below to receive pricing information:
             </p>
           </div>
-          <div className="flex gap-2 flex-col">
+          <form className="flex gap-2 flex-col" onSubmit={submitPricing}>
             <div className="form-group flex flex-col sm:flex-row">
               <p className="flex-none">Name:</p>
               <input
                 type="text"
+                name="name"
                 style={{ outline: "none" }}
                 className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
@@ -306,6 +330,7 @@ export default function Home() {
               <p className="flex-none">Email Address:</p>
               <input
                 type="text"
+                name="email"
                 style={{ outline: "none" }}
                 className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
@@ -314,6 +339,7 @@ export default function Home() {
               <p className="flex-none">Company Name:</p>
               <input
                 type="text"
+                name="company"
                 style={{ outline: "none" }}
                 className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
@@ -325,14 +351,18 @@ export default function Home() {
               </p>
               <input
                 type="text"
+                name="prospects"
                 style={{ outline: "none" }}
                 className="border-b-2 border-blue-500 sm:ml-2 flex-1"
               />
             </div>
-            <button className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4">
+            <button
+              type="submit"
+              className="bg-blue-500 text-white p-2 pl-3 pr-3 rounded-3xl w-32 mx-auto mt-4"
+            >
               Submit
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <div className="bg-white flex flex-col p-12 items-center">
